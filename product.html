@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product details, reviews, and best prices for electronics.">
+    <title>Product Details | TechDeals</title>
+
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/modern.css" as="style">
+    <link rel="preload" href="assets/scripts/product-page.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/modern.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    
+    <!-- Schema.org will be dynamically injected -->
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Notification Container -->
+        <div id="notification-container" class="notification-container"></div>
+
+        <!-- Header -->
+        <header class="header">
+            <!-- Header content will be loaded from a template or here -->
+        </header>
+
+        <!-- Main Content -->
+        <main class="main" id="product-detail-container">
+            <!-- Product details will be dynamically loaded here -->
+            <!-- Skeleton Loader -->
+            <div class="container skeleton-loader">
+                <div class="breadcrumb skeleton" style="width: 40%;"></div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+                    <div class="gallery">
+                        <div class="gallery-main skeleton" style="aspect-ratio: 1;"></div>
+                        <div class="gallery-thumbs">
+                            <div class="gallery-thumb skeleton"></div>
+                            <div class="gallery-thumb skeleton"></div>
+                            <div class="gallery-thumb skeleton"></div>
+                            <div class="gallery-thumb skeleton"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <h1 class="skeleton" style="width: 70%; height: 2.5rem;"></h1>
+                        <div class="skeleton" style="width: 50%; height: 1.5rem; margin-top: 1rem;"></div>
+                        <div class="skeleton" style="width: 100%; height: 6rem; margin-top: 1rem;"></div>
+                        <div class="skeleton" style="width: 100%; height: 8rem; margin-top: 2rem;"></div>
+                        <div class="skeleton" style="width: 80%; height: 10rem; margin-top: 2rem;"></div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Related Products Section -->
+        <section class="section" id="related-products-section" style="display: none;">
+            <div class="container">
+                <h2 class="section-title">You Might Also Like</h2>
+                <div class="grid" id="related-products-grid">
+                    <!-- Related products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <!-- Footer content will be loaded from a template or here -->
+        </footer>
+    </div>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top ripple" aria-label="Scroll to top">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M5 15l7-7 7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </svg>
+    </button>
+
+    <!-- Scripts -->
+    <script src="assets/scripts/product-page.js"></script>
+    <script src="assets/scripts/ui-enhancements.js" defer></script>
+</body>
+</html> 
