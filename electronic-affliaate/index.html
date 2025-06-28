@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TechDeals - Your trusted source for electronic product reviews, price comparisons, and exclusive deals. Find the best tech at unbeatable prices.">
+    <meta name="keywords" content="electronics deals, tech reviews, product comparisons, best prices, smartphones, laptops, audio equipment">
+    <meta name="author" content="TechDeals">
+    <meta property="og:title" content="TechDeals - Best Electronic Products & Reviews">
+    <meta property="og:description" content="Expert reviews, price comparisons, and exclusive offers on the latest tech products">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:url" content="https://techdeals.com">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://techdeals.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>TechDeals - Best Electronic Products & Reviews</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "TechDeals",
+      "url": "https://techdeals.com",
+      "description": "Expert reviews and best deals on electronic products",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://techdeals.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Skip Link for Accessibility -->
+        <a href="#main-content" class="skip-link sr-only focus-ring">Skip to main content</a>
+        
+        <!-- Header -->
+        <header class="header" role="banner">
+            <div class="container">
+                <div class="header-inner">
+                    <a href="index.html" class="logo hover-scale-sm">
+                        <h2 class="text-gradient fw-bold m-0">TechDeals</h2>
+                    </a>
+                    
+                    <!-- Enhanced Search Bar -->
+                    <div class="search-container d-none d-md-block">
+                        <input type="search" 
+                               class="search-input focus-ring" 
+                               placeholder="Search products, brands, categories..." 
+                               aria-label="Search products"
+                               autocomplete="off">
+                        <button type="button" class="search-button" aria-label="Search">
+                            🔍
+                        </button>
+                        <div class="search-suggestions" role="listbox" aria-label="Search suggestions">
+                            <!-- Dynamic suggestions will be inserted here -->
+                        </div>
+                    </div>
+                    
+                    <nav role="navigation" aria-label="Main navigation">
+                        <ul class="nav d-none d-lg-flex">
+                            <li class="nav-item"><a href="index.html" class="nav-link active focus-ring" aria-current="page">Home</a></li>
+                            <li class="nav-item">
+                                <a href="categories.html" 
+                                   class="nav-link focus-ring" 
+                                   data-mega-menu="categories"
+                                   aria-expanded="false"
+                                   aria-haspopup="true">Categories</a>
+                            </li>
+                            <li class="nav-item"><a href="reviews.html" class="nav-link focus-ring">Reviews</a></li>
+                            <li class="nav-item"><a href="blog.html" class="nav-link focus-ring">Blog</a></li>
+                            <li class="nav-item"><a href="about.html" class="nav-link focus-ring">About</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link focus-ring">Contact</a></li>
+                        </ul>
+                        
+                        <button class="menu-toggle d-lg-none" 
+                                aria-label="Toggle navigation menu"
+                                aria-expanded="false"
+                                aria-controls="mobile-nav">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+            
+            <!-- Mega Menu -->
+            <div class="mega-menu" id="categories-mega-menu">
+                <div class="container">
+                    <div class="mega-menu-content">
+                        <div class="mega-menu-section">
+                            <h4>Mobile & Computing</h4>
+                            <ul class="mega-menu-links">
+                                <li><a href="category-detail.html" class="focus-ring">📱 Smartphones</a></li>
+                                <li><a href="category-detail.html" class="focus-ring">💻 Laptops</a></li>
+                                <li><a href="category-detail.html" class="focus-ring">📱 Tablets</a></li>
+                                <li><a href="category-detail.html" class="focus-ring">⌚ Smartwatches</a></li>
+                                <li><a href="category-detail.html" class="focus-ring">🎮 Gaming</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-section">
+                            <h4>Audio & Visual</h4>
+                            <ul class="mega-menu-links">
+                                <li><a href="category-detail.html" class="focus-ring">🎧 Headphones</a></li>
+                                <li><a href="category-detail.html" class="focus-ring">🔊 Speakers</a></li>
+                                <li><a href="category-detail.html" class="focus-ring">📺 TVs</a></li>
+                                <li><a href="category-detail.html" class="focus-ring">📷 Cameras</a></li>
+                                <li><a href="category-detail.html" class="focus-ring">🎵 Audio Equipment</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-section">
+                            <h4>Smart Home</h4>
+                            <ul class="mega-menu-links">
+                                <li><a href="category-detail.html" class="focus-ring">🏠 Smart Speakers</a></li>
+                                <li><a href="category-detail.html" class="focus-ring">💡 Smart Lighting</a></li>
+                                <li><a href="category-detail.html" class="focus-ring">🔒 Security Cameras</a></li>
+                                <li><a href="category-detail.html" class="focus-ring">🌡️ Thermostats</a></li>
+                                <li><a href="category-detail.html" class="focus-ring">🔌 Smart Plugs</a></li>
+                            </ul>
+                        </div>
+                        <div class="mega-menu-section">
+                            <div class="mega-menu-featured">
+                                <h4>Featured Deal</h4>
+                                <div class="card-title fs-lg">Black Friday Sale</div>
+                                <p class="fs-sm">Up to 70% off on selected electronics</p>
+                                <a href="categories.html" class="btn btn-primary btn-sm">Shop Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <nav class="nav d-lg-none" id="mobile-nav" aria-label="Mobile navigation">
+                <div class="search-container d-md-none mb-lg">
+                    <input type="search" 
+                           class="search-input focus-ring" 
+                           placeholder="Search products..." 
+                           aria-label="Search products">
+                    <button type="button" class="search-button" aria-label="Search">🔍</button>
+                </div>
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link active focus-ring">Home</a></li>
+                    <li class="nav-item"><a href="categories.html" class="nav-link focus-ring">Categories</a></li>
+                    <li class="nav-item"><a href="reviews.html" class="nav-link focus-ring">Reviews</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link focus-ring">Blog</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link focus-ring">About</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link focus-ring">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-overlay"></div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main" id="main-content" role="main">
+            <!-- Hero Section -->
+            <section class="hero parallax" data-speed="0.5" aria-labelledby="hero-heading">
+                <div class="container">
+                    <div class="hero-content animate-fade-in">
+                        <h1 id="hero-heading" class="text-white">Find the Best Electronic Deals</h1>
+                        <p class="lead text-white">Expert reviews, price comparisons, and exclusive offers on the latest tech products</p>
+                        <div class="d-flex justify-center gap-md flex-wrap mt-xl">
+                            <a href="categories.html" class="btn btn-secondary btn-lg hover-scale focus-ring" role="button">Browse Categories</a>
+                            <a href="reviews.html" class="btn btn-primary btn-lg btn-animated hover-lift focus-ring" role="button">Latest Reviews</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Categories -->
+            <section class="section" aria-labelledby="categories-heading">
+                <div class="container">
+                    <h2 id="categories-heading" class="text-center mb-xl reveal">Featured Categories</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-lg">
+                        <a href="category-detail.html" 
+                           class="card category-card hover-lift stagger-item focus-ring"
+                           role="button"
+                           aria-label="Browse smartphones - Latest models">
+                            <div class="category-icon">📱</div>
+                            <h3 class="fs-lg fw-semibold">Smartphones</h3>
+                            <p class="fs-sm text-muted mb-0">156 products</p>
+                            <p class="fs-xs text-muted">Latest models</p>
+                        </a>
+                        <a href="category-detail.html" 
+                           class="card category-card hover-lift stagger-item focus-ring"
+                           role="button"
+                           aria-label="Browse laptops - Work and Gaming">
+                            <div class="category-icon">💻</div>
+                            <h3 class="fs-lg fw-semibold">Laptops</h3>
+                            <p class="fs-sm text-muted mb-0">89 products</p>
+                            <p class="fs-xs text-muted">Work & Gaming</p>
+                        </a>
+                        <a href="category-detail.html" 
+                           class="card category-card hover-lift stagger-item focus-ring"
+                           role="button"
+                           aria-label="Browse audio equipment - Headphones and Speakers">
+                            <div class="category-icon">🎧</div>
+                            <h3 class="fs-lg fw-semibold">Audio</h3>
+                            <p class="fs-sm text-muted mb-0">234 products</p>
+                            <p class="fs-xs text-muted">Headphones & Speakers</p>
+                        </a>
+                        <a href="category-detail.html" 
+                           class="card category-card hover-lift stagger-item focus-ring"
+                           role="button"
+                           aria-label="Browse TVs - 4K and Smart TVs">
+                            <div class="category-icon">📺</div>
+                            <h3 class="fs-lg fw-semibold">TVs</h3>
+                            <p class="fs-sm text-muted mb-0">67 products</p>
+                            <p class="fs-xs text-muted">4K & Smart TVs</p>
+                        </a>
+                        <a href="category-detail.html" 
+                           class="card category-card hover-lift stagger-item focus-ring"
+                           role="button"
+                           aria-label="Browse cameras - DSLR and Mirrorless">
+                            <div class="category-icon">📷</div>
+                            <h3 class="fs-lg fw-semibold">Cameras</h3>
+                            <p class="fs-sm text-muted mb-0">123 products</p>
+                            <p class="fs-xs text-muted">DSLR & Mirrorless</p>
+                        </a>
+                        <a href="category-detail.html" 
+                           class="card category-card hover-lift stagger-item focus-ring"
+                           role="button"
+                           aria-label="Browse wearables - Smartwatches and Fitness">
+                            <div class="category-icon">⌚</div>
+                            <h3 class="fs-lg fw-semibold">Wearables</h3>
+                            <p class="fs-sm text-muted mb-0">78 products</p>
+                            <p class="fs-xs text-muted">Smartwatches & Fitness</p>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Top Products -->
+            <section class="section bg-light" aria-labelledby="top-products-heading">
+                <div class="container">
+                    <h2 id="top-products-heading" class="text-center mb-xl reveal">Top Products This Week</h2>
+                    <div class="product-grid">
+                        <!-- iPhone 15 Pro -->
+                        <article class="card product-card hover-lift stagger-item" 
+                                 itemscope itemtype="https://schema.org/Product">
+                            <div class="img-hover-zoom position-relative">
+                                <img src="images/products/smartphone-1.webp" 
+                                     alt="iPhone 15 Pro - Premium titanium smartphone" 
+                                     class="card-image img-fade-in" 
+                                     loading="lazy"
+                                     itemprop="image"
+                                     srcset="images/products/smartphone-1-300.webp 300w,
+                                             images/products/smartphone-1-600.webp 600w,
+                                             images/products/smartphone-1.webp 800w"
+                                     sizes="(max-width: 768px) 300px, (max-width: 1024px) 400px, 500px">
+                                <span class="badge badge-success position-absolute" style="top: var(--space-sm); left: var(--space-sm);">Editor's Choice</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title" itemprop="name">iPhone 15 Pro</h3>
+                                <div class="rating mb-sm" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                    <span class="rating-stars" aria-label="4.8 out of 5 stars">
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                    </span>
+                                    <span class="rating-text fs-sm">
+                                        <span itemprop="ratingValue">4.8</span> 
+                                        (<span itemprop="reviewCount">245</span> reviews)
+                                    </span>
+                                </div>
+                                <p class="card-text fs-sm" itemprop="description">Premium titanium design with A17 Pro chip and advanced camera system</p>
+                                <div class="price-container" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price-current fw-bold" itemprop="price" content="999">$999</span>
+                                    <span class="price-original text-muted">$1,199</span>
+                                    <span class="discount-badge bg-danger text-white">17% OFF</span>
+                                    <meta itemprop="priceCurrency" content="USD">
+                                    <meta itemprop="availability" content="https://schema.org/InStock">
+                                </div>
+                                <a href="product.html" 
+                                   class="btn btn-primary btn-block mt-md btn-animated focus-ring"
+                                   role="button"
+                                   aria-label="View iPhone 15 Pro deal details">View Deal</a>
+                            </div>
+                        </article>
+                        
+                        <!-- MacBook Air M3 -->
+                        <article class="card product-card hover-lift stagger-item" 
+                                 itemscope itemtype="https://schema.org/Product">
+                            <div class="img-hover-zoom position-relative">
+                                <img src="images/products/laptop-1.webp" 
+                                     alt="MacBook Air M3 - Ultra-thin laptop" 
+                                     class="card-image img-fade-in" 
+                                     loading="lazy"
+                                     itemprop="image">
+                                <span class="badge badge-info position-absolute" style="top: var(--space-sm); left: var(--space-sm);">Best for Students</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title" itemprop="name">MacBook Air M3</h3>
+                                <div class="rating mb-sm" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                    <span class="rating-stars" aria-label="4.9 out of 5 stars">
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                    </span>
+                                    <span class="rating-text fs-sm">
+                                        <span itemprop="ratingValue">4.9</span> 
+                                        (<span itemprop="reviewCount">189</span> reviews)
+                                    </span>
+                                </div>
+                                <p class="card-text fs-sm" itemprop="description">Ultra-thin design with M3 chip, perfect for productivity</p>
+                                <div class="price-container" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price-current fw-bold" itemprop="price" content="1099">$1,099</span>
+                                    <span class="price-original text-muted">$1,199</span>
+                                    <span class="discount-badge bg-danger text-white">8% OFF</span>
+                                    <meta itemprop="priceCurrency" content="USD">
+                                    <meta itemprop="availability" content="https://schema.org/InStock">
+                                </div>
+                                <a href="product.html" 
+                                   class="btn btn-primary btn-block mt-md btn-animated focus-ring"
+                                   role="button"
+                                   aria-label="View MacBook Air M3 deal details">View Deal</a>
+                            </div>
+                        </article>
+                        
+                        <!-- Sony WH-1000XM5 -->
+                        <article class="card product-card hover-lift stagger-item" 
+                                 itemscope itemtype="https://schema.org/Product">
+                            <div class="img-hover-zoom position-relative">
+                                <img src="images/products/headphones-1.webp" 
+                                     alt="Sony WH-1000XM5 - Noise canceling headphones" 
+                                     class="card-image img-fade-in" 
+                                     loading="lazy"
+                                     itemprop="image">
+                                <span class="badge badge-warning position-absolute" style="top: var(--space-sm); left: var(--space-sm);">Best Seller</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title" itemprop="name">Sony WH-1000XM5</h3>
+                                <div class="rating mb-sm" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                    <span class="rating-stars" aria-label="5 out of 5 stars">
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                    </span>
+                                    <span class="rating-text fs-sm">
+                                        <span itemprop="ratingValue">5.0</span> 
+                                        (<span itemprop="reviewCount">412</span> reviews)
+                                    </span>
+                                </div>
+                                <p class="card-text fs-sm" itemprop="description">Industry-leading noise cancellation with 30-hour battery</p>
+                                <div class="price-container" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price-current fw-bold" itemprop="price" content="349">$349</span>
+                                    <span class="price-original text-muted">$399</span>
+                                    <span class="discount-badge bg-danger text-white">13% OFF</span>
+                                    <meta itemprop="priceCurrency" content="USD">
+                                    <meta itemprop="availability" content="https://schema.org/InStock">
+                                </div>
+                                <a href="product.html" 
+                                   class="btn btn-primary btn-block mt-md btn-animated focus-ring"
+                                   role="button"
+                                   aria-label="View Sony WH-1000XM5 deal details">View Deal</a>
+                            </div>
+                        </article>
+
+                        <!-- LG OLED C3 -->
+                        <article class="card product-card hover-lift stagger-item" 
+                                 itemscope itemtype="https://schema.org/Product">
+                            <div class="img-hover-zoom position-relative">
+                                <img src="images/products/tv-1.webp" 
+                                     alt="LG OLED C3 65 inch - 4K OLED Smart TV" 
+                                     class="card-image img-fade-in" 
+                                     loading="lazy"
+                                     itemprop="image">
+                                <span class="badge badge-primary position-absolute" style="top: var(--space-sm); left: var(--space-sm);">New</span>
+                            </div>
+                            <div class="card-body">
+                                <h3 class="card-title" itemprop="name">LG OLED C3 65"</h3>
+                                <div class="rating mb-sm" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+                                    <span class="rating-stars" aria-label="4.5 out of 5 stars">
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star filled">★</span>
+                                        <span class="rating-star empty">★</span>
+                                    </span>
+                                    <span class="rating-text fs-sm">
+                                        <span itemprop="ratingValue">4.5</span> 
+                                        (<span itemprop="reviewCount">98</span> reviews)
+                                    </span>
+                                </div>
+                                <p class="card-text fs-sm" itemprop="description">4K OLED display with Dolby Vision and gaming features</p>
+                                <div class="price-container" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+                                    <span class="price-current fw-bold" itemprop="price" content="1799">$1,799</span>
+                                    <span class="price-original text-muted">$2,199</span>
+                                    <span class="discount-badge bg-danger text-white">18% OFF</span>
+                                    <meta itemprop="priceCurrency" content="USD">
+                                    <meta itemprop="availability" content="https://schema.org/InStock">
+                                </div>
+                                <a href="product.html" 
+                                   class="btn btn-primary btn-block mt-md btn-animated focus-ring"
+                                   role="button"
+                                   aria-label="View LG OLED C3 deal details">View Deal</a>
+                            </div>
+                        </article>
+                    </div>
+                    
+                    <!-- View All Products Button -->
+                    <div class="text-center mt-2xl">
+                        <a href="categories.html" 
+                           class="btn btn-outline-primary btn-lg hover-scale focus-ring"
+                           role="button">View All Products</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features -->
+            <section class="section">
+                <div class="container">
+                    <h2 class="text-center mb-xl">Why Choose TechDeals?</h2>
+                    <div class="feature-grid">
+                        <div class="feature-item">
+                            <div class="feature-icon">🔍</div>
+                            <h3>Expert Reviews</h3>
+                            <p>In-depth analysis and real-world testing by tech professionals</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">💰</div>
+                            <h3>Best Prices</h3>
+                            <p>Compare prices across retailers to find the best deals</p>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">🚀</div>
+                            <h3>Latest Tech</h3>
+                            <p>Stay updated with the newest electronic releases and innovations</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter -->
+            <section class="section">
+                <div class="container">
+                    <div class="newsletter">
+                        <h3>Get Exclusive Deals in Your Inbox</h3>
+                        <p>Subscribe to our newsletter for the latest tech deals and reviews</p>
+                        <form class="newsletter-form">
+                            <input type="email" class="form-control" placeholder="Enter your email" required>
+                            <button type="submit" class="btn btn-secondary">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>About TechDeals</h4>
+                        <p>Your trusted source for electronic product reviews, comparisons, and the best deals online.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">f</a>
+                            <a href="#" class="social-link" aria-label="Twitter">𝕏</a>
+                            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="category-detail.html">Smartphones</a></li>
+                            <li><a href="category-detail.html">Laptops</a></li>
+                            <li><a href="category-detail.html">Audio</a></li>
+                            <li><a href="category-detail.html">Cameras</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="blog.html">Buying Guides</a></li>
+                            <li><a href="reviews.html">Product Reviews</a></li>
+                            <li><a href="blog.html">Tech News</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="legal.html">Privacy Policy</a></li>
+                            <li><a href="legal.html">Terms of Service</a></li>
+                            <li><a href="legal.html">Affiliate Disclosure</a></li>
+                            <li><a href="contact.html">Advertise</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2024 TechDeals. All rights reserved. | Affiliate links may earn us commission.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button class="fab scroll-top" aria-label="Scroll to top" title="Back to top">↑</button>
+
+    <!-- Toast Container -->
+    <div class="toast-container" aria-live="polite" aria-atomic="true"></div>
+
+    <!-- Enhanced JavaScript -->
+    <script src="assets/scripts/main.js"></script>
+
+    <!-- Fallback JavaScript for basic functionality -->
+    <script>
+        // Fallback mobile menu toggle if main.js fails to load
+        if (!window.techDealsApp) {
+            const menuToggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('.nav:not(.desktop-only)');
+            const overlay = document.querySelector('.mobile-overlay');
+            
+            menuToggle?.addEventListener('click', () => {
+                nav.classList.toggle('active');
+                overlay.classList.toggle('active');
+                menuToggle.classList.toggle('active');
+                document.body.style.overflow = nav.classList.contains('active') ? 'hidden' : '';
+            });
+            
+            overlay?.addEventListener('click', () => {
+                nav.classList.remove('active');
+                overlay.classList.remove('active');
+                menuToggle.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+            
+            // Basic scroll to top
+            const scrollTop = document.querySelector('.scroll-top');
+            
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    scrollTop.classList.add('visible');
+                } else {
+                    scrollTop.classList.remove('visible');
+                }
+            });
+            
+            scrollTop?.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // Basic lazy loading for images
+            if ('IntersectionObserver' in window) {
+                const lazyImages = document.querySelectorAll('img[loading="lazy"]');
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.classList.add('img-fade-in');
+                            img.addEventListener('load', () => {
+                                img.classList.add('loaded');
+                            });
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+                lazyImages.forEach(img => imageObserver.observe(img));
+            }
+        }
+    </script>
+</body>
+</html> 

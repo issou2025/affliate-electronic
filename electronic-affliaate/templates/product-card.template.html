@@ -1,0 +1,174 @@
+<!-- Product Card Template -->
+<!-- This template can be used with server-side rendering or JavaScript templating -->
+<!-- Variables marked with {{variable}} should be replaced with actual data -->
+
+<article class="card product-card hover-lift stagger-item" 
+         itemscope itemtype="https://schema.org/Product"
+         data-product-id="{{id}}">
+    <div class="img-hover-zoom position-relative">
+        <img src="{{images.main}}" 
+             alt="{{name}} - {{shortDescription}}" 
+             class="card-image img-fade-in" 
+             loading="lazy"
+             itemprop="image"
+             srcset="{{images.thumbnail}} 300w,
+                     {{images.main}} 600w"
+             sizes="(max-width: 768px) 300px, (max-width: 1024px) 400px, 500px">
+        
+        <!-- Dynamic badge based on product tags -->
+        {{#if tags.includes('editors-choice')}}
+        <span class="badge badge-success position-absolute" style="top: var(--space-sm); left: var(--space-sm);">Editor's Choice</span>
+        {{else if tags.includes('best-seller')}}
+        <span class="badge badge-warning position-absolute" style="top: var(--space-sm); left: var(--space-sm);">Best Seller</span>
+        {{else if tags.includes('new-release')}}
+        <span class="badge badge-primary position-absolute" style="top: var(--space-sm); left: var(--space-sm);">New</span>
+        {{else if pricing.discount > 15}}
+        <span class="badge badge-danger position-absolute" style="top: var(--space-sm); left: var(--space-sm);">Hot Deal</span>
+        {{/if}}
+    </div>
+    
+    <div class="card-body">
+        <h3 class="card-title" itemprop="name">{{name}}</h3>
+        
+        <!-- Rating Section -->
+        <div class="rating mb-sm" itemprop="aggregateRating" itemscope itemtype="https://schema.org/AggregateRating">
+            <span class="rating-stars" aria-label="{{rating.average}} out of 5 stars">
+                {{#repeat rating.average}}
+                <span class="rating-star filled">★</span>
+                {{/repeat}}
+                {{#repeat (5 - rating.average)}}
+                <span class="rating-star empty">★</span>
+                {{/repeat}}
+            </span>
+            <span class="rating-text fs-sm">
+                <span itemprop="ratingValue">{{rating.average}}</span> 
+                (<span itemprop="reviewCount">{{rating.count}}</span> reviews)
+            </span>
+        </div>
+        
+        <!-- Product Description -->
+        <p class="card-text fs-sm" itemprop="description">{{shortDescription}}</p>
+        
+        <!-- Features Tags -->
+        {{#if features.length > 0}}
+        <div class="features-tags mb-sm">
+            {{#each features}}
+            <span class="tag tag-sm">{{this}}</span>
+            {{/each}}
+        </div>
+        {{/if}}
+        
+        <!-- Price Section -->
+        <div class="price-container" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <span class="price-current fw-bold" itemprop="price" content="{{pricing.current}}">
+                ${{pricing.current}}
+            </span>
+            {{#if pricing.original > pricing.current}}
+            <span class="price-original text-muted">${{pricing.original}}</span>
+            <span class="discount-badge bg-danger text-white">{{pricing.discount}}% OFF</span>
+            {{/if}}
+            <meta itemprop="priceCurrency" content="{{pricing.currency}}">
+            <meta itemprop="availability" content="https://schema.org/{{availability === 'in-stock' ? 'InStock' : 'OutOfStock'}}">
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="card-actions mt-md">
+            <a href="product.html?id={{id}}" 
+               class="btn btn-primary btn-block btn-animated focus-ring"
+               role="button"
+               aria-label="View {{name}} deal details">
+                View Deal
+            </a>
+            {{#if affiliateLinks.length > 1}}
+            <button class="btn btn-outline-primary btn-sm mt-xs compare-btn" 
+                    data-product-id="{{id}}"
+                    aria-label="Compare prices for {{name}}">
+                Compare Prices ({{affiliateLinks.length}})
+            </button>
+            {{/if}}
+        </div>
+    </div>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "Product",
+      "name": "{{name}}",
+      "brand": "{{brand}}",
+      "category": "{{category}}", 
+      "description": "{{longDescription}}",
+      "sku": "{{id}}",
+      "image": "{{images.main}}",
+      "offers": {
+        "@type": "Offer",
+        "price": "{{pricing.current}}",
+        "priceCurrency": "{{pricing.currency}}",
+        "availability": "https://schema.org/{{availability === 'in-stock' ? 'InStock' : 'OutOfStock'}}",
+        "seller": {
+          "@type": "Organization",
+          "name": "TechDeals"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{{rating.average}}",
+        "reviewCount": "{{rating.count}}"
+      }
+    }
+    </script>
+</article>
+
+<!-- 
+Usage Examples:
+
+1. Server-side rendering (PHP, Node.js, Python, etc.):
+   - Replace {{variable}} placeholders with actual data from products.json
+   - Use templating engines like Handlebars, Mustache, Twig, Jinja2, etc.
+
+2. Client-side JavaScript:
+   - Fetch data from products.json
+   - Use JavaScript templating to populate this template
+   - Dynamically insert into DOM for infinite scroll
+
+3. Static site generators:
+   - Use with Jekyll, Hugo, Gatsby, etc.
+   - Generate multiple product pages from single template
+
+Sample JavaScript integration:
+
+```javascript
+// Load and render products
+async function loadProducts(category = null, page = 1, limit = 12) {
+    const response = await fetch('data/products.json');
+    const data = await response.json();
+    
+    let products = data.products;
+    
+    // Filter by category if specified
+    if (category) {
+        products = products.filter(p => p.category === category);
+    }
+    
+    // Pagination
+    const start = (page - 1) * limit;
+    const paginatedProducts = products.slice(start, start + limit);
+    
+    // Render products using template
+    const container = document.querySelector('.product-grid');
+    paginatedProducts.forEach(product => {
+        const productHTML = renderProductCard(product);
+        container.insertAdjacentHTML('beforeend', productHTML);
+    });
+}
+
+function renderProductCard(product) {
+    // Use a templating library or manual string replacement
+    return productCardTemplate
+        .replace(/\{\{id\}\}/g, product.id)
+        .replace(/\{\{name\}\}/g, product.name)
+        .replace(/\{\{shortDescription\}\}/g, product.shortDescription)
+        // ... continue for all variables
+}
+```
+--> 

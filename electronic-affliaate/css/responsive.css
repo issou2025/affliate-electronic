@@ -1,0 +1,439 @@
+/* Responsive CSS - Mobile-first Media Queries */
+@import url('variables.css');
+
+/* Mobile First Approach */
+:root {
+    --container-padding: 1rem;
+}
+
+/* Base Mobile Styles */
+.container {
+    padding: 0 var(--container-padding);
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+}
+
+/* Sidebar Layout */
+.sidebar-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sidebar {
+    width: 100%;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    height: 100vh;
+    background: var(--color-background);
+    z-index: 1000;
+    padding: 1rem;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+}
+
+.sidebar.active {
+    left: 0;
+}
+
+/* Filter Toggle Button */
+.filter-toggle {
+    display: block;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 100;
+    background: var(--color-primary);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Product Cards */
+.product-card {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
+    object-fit: cover;
+}
+
+/* Navigation */
+.nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: var(--color-background);
+    z-index: 1000;
+    padding: 2rem;
+}
+
+.nav.active {
+    display: block;
+}
+
+.menu-toggle {
+    display: block;
+}
+
+/* Tablet Styles (768px and up) */
+@media (min-width: 768px) {
+    :root {
+        --container-padding: 2rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .nav {
+        position: static;
+        height: auto;
+        display: flex;
+        padding: 0;
+        background: none;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}
+
+/* Desktop Styles (1024px and up) */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .sidebar-layout {
+        flex-direction: row;
+    }
+
+    .sidebar {
+        position: sticky;
+        top: 1rem;
+        width: 280px;
+        height: calc(100vh - 2rem);
+        left: 0;
+    }
+
+    .filter-toggle {
+        display: none;
+    }
+}
+
+/* Large Desktop Styles (1440px and up) */
+@media (min-width: 1440px) {
+    .container {
+        max-width: 1400px;
+    }
+
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .nav,
+    .sidebar,
+    .filter-toggle,
+    .footer {
+        display: none;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.product-card {
+    animation: fadeIn 0.3s ease-in;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #121212;
+        --color-text: #ffffff;
+        --color-primary: #4CAF50;
+    }
+}
+
+/* Mobile menu styles */
+@media (max-width: 767px) {
+  /* Navigation */
+  .menu-toggle {
+    display: flex;
+  }
+  
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 300px;
+    height: 100vh;
+    background-color: var(--color-background);
+    flex-direction: column;
+    padding: var(--space-2xl) var(--space-lg);
+    box-shadow: var(--shadow-xl);
+    transition: right var(--transition-base);
+    z-index: var(--z-modal);
+  }
+  
+  .nav.active {
+    right: 0;
+  }
+  
+  .nav-item {
+    width: 100%;
+  }
+  
+  .nav-link {
+    display: block;
+    padding: var(--space-md) 0;
+  }
+  
+  /* Mobile overlay */
+  .mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: calc(var(--z-modal) - 1);
+  }
+  
+  .mobile-overlay.active {
+    display: block;
+  }
+  
+  /* Grid adjustments */
+  .grid-cols-2,
+  .grid-cols-3,
+  .grid-cols-4,
+  .grid-cols-5,
+  .grid-cols-6 {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Sidebar layout on mobile */
+  .sidebar-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .sidebar {
+    position: static;
+    margin-bottom: var(--space-xl);
+  }
+  
+  /* Footer on mobile */
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  
+  /* Buttons on mobile */
+  .btn {
+    padding: var(--space-md) var(--space-lg);
+  }
+  
+  /* Cards on mobile */
+  .card-image {
+    height: 180px;
+  }
+  
+  /* Hide desktop-only elements */
+  .desktop-only {
+    display: none;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+  /* Container */
+  .container {
+    padding: 0 var(--space-lg);
+  }
+  
+  /* Grid system for tablets */
+  .md\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .md\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .md\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  
+  /* Flexbox for tablets */
+  .md\:flex { display: flex; }
+  .md\:flex-row { flex-direction: row; }
+  .md\:flex-col { flex-direction: column; }
+  
+  /* Text alignment for tablets */
+  .md\:text-left { text-align: left; }
+  .md\:text-center { text-align: center; }
+  .md\:text-right { text-align: right; }
+  
+  /* Spacing for tablets */
+  .md\:mt-0 { margin-top: 0; }
+  .md\:mb-0 { margin-bottom: 0; }
+  
+  /* Product cards on tablets */
+  .product-card .card-image {
+    height: 220px;
+  }
+  
+  /* Footer on tablets */
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  /* Container */
+  .container {
+    padding: 0 var(--space-xl);
+  }
+  
+  /* Grid system for desktop */
+  .lg\:grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lg\:grid-cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .lg\:grid-cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .lg\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .lg\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  
+  /* Flexbox for desktop */
+  .lg\:flex { display: flex; }
+  .lg\:flex-row { flex-direction: row; }
+  .lg\:flex-col { flex-direction: column; }
+  
+  /* Display utilities for desktop */
+  .lg\:block { display: block; }
+  .lg\:inline-block { display: inline-block; }
+  .lg\:hidden { display: none; }
+  
+  /* Hero section on desktop */
+  .hero {
+    min-height: 600px;
+  }
+  
+  /* Product gallery on desktop */
+  .gallery {
+    grid-template-columns: 1fr 2fr;
+    align-items: start;
+  }
+  
+  .gallery-thumbs {
+    grid-template-columns: 1fr;
+    order: -1;
+  }
+  
+  /* Footer on desktop */
+  .footer-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  /* Hide mobile-only elements */
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* Wide desktop styles */
+@media (min-width: 1280px) {
+  /* Container max width */
+  .container {
+    max-width: var(--container-xl);
+  }
+  
+  /* Grid system for wide desktop */
+  .xl\:grid-cols-5 { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .xl\:grid-cols-6 { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  
+  /* Product cards on wide desktop */
+  .product-card .card-image {
+    height: 250px;
+  }
+}
+
+/* Print styles */
+@media print {
+  /* Hide navigation and footer */
+  .header,
+  .footer,
+  .btn,
+  .pagination,
+  .filters {
+    display: none;
+  }
+  
+  /* Reset colors for print */
+  body {
+    color: #000;
+    background: #fff;
+  }
+  
+  /* Remove shadows and transitions */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    transition: none !important;
+  }
+  
+  /* Ensure links are visible */
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Dark mode preparation */
+@media (prefers-color-scheme: dark) {
+  /* Ready for dark mode implementation */
+} 

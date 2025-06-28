@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse smartphones - Compare prices and features of the latest iPhone, Samsung Galaxy, Google Pixel models">
+    <title>Smartphones - TechDeals</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="css/modern.css" as="style">
+    <link rel="preload" href="assets/scripts/main.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/modern.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    
+    <!-- Schema.org markup for better SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Smartphones",
+        "description": "Browse and compare the latest smartphones with expert reviews and the best prices",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "1250"
+        }
+    }
+    </script>
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Notification Container -->
+        <div id="notification-container" class="notification-container"></div>
+
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-inner">
+                    <a href="index.html" class="logo">
+                        <h2 class="gradient-text">TechDeals</h2>
+                    </a>
+                    
+                    <nav>
+                        <ul class="nav desktop-only">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="categories.html" class="nav-link active">Categories</a></li>
+                            <li class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></li>
+                            <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                            <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                            <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                        </ul>
+                        
+                        <button class="menu-toggle mobile-only" aria-label="Toggle navigation">
+                            <span class="menu-icon"></span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+            
+            <!-- Mobile Navigation -->
+            <ul class="nav">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="categories.html" class="nav-link active">Categories</a></li>
+                <li class="nav-item"><a href="reviews.html" class="nav-link">Reviews</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="mobile-overlay"></div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="container">
+                    <nav aria-label="Breadcrumb">
+                        <ul class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                            <li class="breadcrumb-item"><a href="categories.html">Categories</a></li>
+                            <li class="breadcrumb-item active">Smartphones</li>
+                        </ul>
+                    </nav>
+                    
+                    <h1 class="hero-title">Smartphones</h1>
+                    <p class="hero-subtitle">Discover the latest smartphones with expert reviews and the best prices</p>
+                    
+                    <!-- Search Bar -->
+                    <div class="search-container">
+                        <input type="search" class="search-input" placeholder="Search smartphones...">
+                        <button class="search-button">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Section -->
+            <section class="section">
+                <div class="container">
+                    <div class="sidebar-layout">
+                        <!-- Mobile Filter Toggle -->
+                        <button class="filter-toggle mobile-only ripple" aria-label="Toggle filters">
+                            <span>Filters</span>
+                            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 4h18M3 12h18M3 20h18" stroke-linecap="round" stroke-width="2"/>
+                            </svg>
+                        </button>
+
+                        <!-- Filters Sidebar -->
+                        <aside class="sidebar">
+                            <div class="filters">
+                                <div class="filter-header">
+                                    <h3>Filters</h3>
+                                    <button class="btn-reset">Reset</button>
+                                </div>
+                                
+                                <div class="filter-group">
+                                    <h3 class="filter-title">Price Range</h3>
+                                    <div class="price-range">
+                                        <input type="number" class="form-control price-input" placeholder="Min" value="0">
+                                        <span>-</span>
+                                        <input type="number" class="form-control price-input" placeholder="Max" value="2000">
+                                    </div>
+                                    <input type="range" class="range-slider" min="0" max="2000" value="1000">
+                                </div>
+
+                                <div class="filter-group">
+                                    <h3 class="filter-title">Brand</h3>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" class="checkbox-input" id="brand-apple">
+                                            <span class="checkbox-custom"></span>
+                                            Apple (45)
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" class="checkbox-input" id="brand-samsung">
+                                            <span class="checkbox-custom"></span>
+                                            Samsung (52)
+                                        </label>
+                                        <label class="checkbox-label">
+                                            <input type="checkbox" class="checkbox-input" id="brand-google">
+                                            <span class="checkbox-custom"></span>
+                                            Google (18)
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="filter-group">
+                                    <h3 class="filter-title">Features</h3>
+                                    <div class="chip-group">
+                                        <label class="chip">
+                                            <input type="checkbox" hidden>
+                                            5G
+                                        </label>
+                                        <label class="chip">
+                                            <input type="checkbox" hidden>
+                                            Wireless Charging
+                                        </label>
+                                        <label class="chip">
+                                            <input type="checkbox" hidden>
+                                            Water Resistant
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+
+                        <!-- Products Grid -->
+                        <div class="products-container">
+                            <!-- Sort and Results -->
+                            <div class="toolbar">
+                                <p class="results-count">Showing <span>256</span> products</p>
+                                <div class="sort-wrapper">
+                                    <select class="form-select" id="sort">
+                                        <option>Featured</option>
+                                        <option>Price: Low to High</option>
+                                        <option>Price: High to Low</option>
+                                        <option>Newest First</option>
+                                        <option>Best Rated</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Loading State -->
+                            <div class="loading-state" id="loading-state" style="display: none;">
+                                <div class="loading-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <p>Loading amazing deals...</p>
+                            </div>
+
+                            <!-- Products Grid -->
+                            <div class="grid" id="products-grid">
+                                <!-- Products will be dynamically loaded here -->
+                            </div>
+
+                            <!-- Empty State -->
+                            <div class="empty-state" id="empty-state" style="display: none;">
+                                <svg width="100" height="100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                </svg>
+                                <h3>No products found</h3>
+                                <p>Try adjusting your filters or search for something else</p>
+                                <button class="btn btn-primary" onclick="resetFilters()">Reset Filters</button>
+                            </div>
+
+                            <!-- Pagination -->
+                            <nav class="pagination-container" aria-label="Pagination">
+                                <button class="pagination-button ripple" aria-label="Previous page">←</button>
+                                <div class="pagination-numbers">
+                                    <button class="pagination-button active ripple">1</button>
+                                    <button class="pagination-button ripple">2</button>
+                                    <button class="pagination-button ripple">3</button>
+                                    <span class="pagination-ellipsis">...</span>
+                                    <button class="pagination-button ripple">10</button>
+                                </div>
+                                <button class="pagination-button ripple" aria-label="Next page">→</button>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Section -->
+            <section class="newsletter-section">
+                <div class="container">
+                    <div class="newsletter-signup">
+                        <h2>🎉 Get the Best Deals First</h2>
+                        <p>Subscribe to our newsletter and never miss out on exclusive offers!</p>
+                        <form class="newsletter-form" id="newsletter-form">
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Your email address" required>
+                                <button type="submit" class="btn btn-primary ripple">
+                                    Subscribe
+                                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path d="M14 5l7 7m0 0l-7 7m7-7H3" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                        <p class="newsletter-note">✓ No spam ✓ Unsubscribe anytime ✓ Weekly deals</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trust Badges -->
+            <section class="trust-section">
+                <div class="container">
+                    <div class="trust-badges">
+                        <div class="trust-badge">
+                            <svg width="40" height="40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            </svg>
+                            <h4>Secure Shopping</h4>
+                            <p>SSL encrypted checkout</p>
+                        </div>
+                        <div class="trust-badge">
+                            <svg width="40" height="40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            </svg>
+                            <h4>Fast Delivery</h4>
+                            <p>2-3 business days</p>
+                        </div>
+                        <div class="trust-badge">
+                            <svg width="40" height="40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            </svg>
+                            <h4>Easy Returns</h4>
+                            <p>30-day return policy</p>
+                        </div>
+                        <div class="trust-badge">
+                            <svg width="40" height="40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            </svg>
+                            <h4>24/7 Support</h4>
+                            <p>Always here to help</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h4>About TechDeals</h4>
+                        <p>Your trusted source for electronic product reviews, comparisons, and the best deals online.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Instagram">
+                                <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M16 4H8a4 4 0 00-4 4v8a4 4 0 004 4h8a4 4 0 004-4V8a4 4 0 00-4-4zm-8 12a4 4 0 110-8 4 4 0 010 8zm8-10a1 1 0 110-2 1 1 0 010 2z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Categories</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Smartphones</a></li>
+                            <li><a href="#">Laptops</a></li>
+                            <li><a href="#">Audio</a></li>
+                            <li><a href="#">Cameras</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Resources</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Buying Guides</a></li>
+                            <li><a href="#">Product Reviews</a></li>
+                            <li><a href="#">Tech News</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-section">
+                        <h4>Legal</h4>
+                        <ul class="footer-links">
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Affiliate Disclosure</a></li>
+                            <li><a href="#">Advertise</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <p>&copy; 2024 TechDeals. All rights reserved.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-top ripple" aria-label="Scroll to top">
+        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path d="M5 15l7-7 7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </svg>
+    </button>
+
+    <!-- Cookie Consent -->
+    <div class="cookie-consent" id="cookie-consent">
+        <div class="cookie-content">
+            <p>🍪 We use cookies to improve your experience and track affiliate sales.</p>
+            <a href="legal.html">Learn more</a>
+        </div>
+        <button class="btn btn-primary btn-sm ripple" onclick="acceptCookies()">Accept</button>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/scripts/main.js" defer></script>
+    <script src="assets/scripts/analytics.js" defer></script>
+    <script src="assets/scripts/ui-enhancements.js" defer></script>
+</body>
+</html> 

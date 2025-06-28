@@ -1,0 +1,154 @@
+{
+  "categories": [
+    {
+      "id": "smartphones",
+      "name": "Smartphones",
+      "slug": "smartphones",
+      "description": "Latest smartphones with cutting-edge technology",
+      "icon": "📱",
+      "featured": true,
+      "productCount": 156
+    },
+    {
+      "id": "laptops",
+      "name": "Laptops",
+      "slug": "laptops", 
+      "description": "Powerful laptops for work, gaming, and creativity",
+      "icon": "💻",
+      "featured": true,
+      "productCount": 89
+    },
+    {
+      "id": "audio",
+      "name": "Audio Equipment",
+      "slug": "audio",
+      "description": "Premium headphones, speakers, and audio gear",
+      "icon": "🎧",
+      "featured": true,
+      "productCount": 234
+    },
+    {
+      "id": "tvs",
+      "name": "Televisions",
+      "slug": "tvs",
+      "description": "4K OLED, QLED and Smart TVs",
+      "icon": "📺",
+      "featured": true,
+      "productCount": 67
+    },
+    {
+      "id": "cameras",
+      "name": "Cameras",
+      "slug": "cameras",
+      "description": "DSLR, mirrorless, and action cameras",
+      "icon": "📷",
+      "featured": true,
+      "productCount": 123
+    },
+    {
+      "id": "wearables",
+      "name": "Wearables",
+      "slug": "wearables",
+      "description": "Smartwatches and fitness trackers",
+      "icon": "⌚",
+      "featured": true,
+      "productCount": 78
+    }
+  ],
+  "brands": [
+    {
+      "id": "apple",
+      "name": "Apple",
+      "logo": "/images/brands/apple.svg",
+      "featured": true
+    },
+    {
+      "id": "samsung",
+      "name": "Samsung", 
+      "logo": "/images/brands/samsung.svg",
+      "featured": true
+    },
+    {
+      "id": "sony",
+      "name": "Sony",
+      "logo": "/images/brands/sony.svg",
+      "featured": true
+    },
+    {
+      "id": "lg",
+      "name": "LG",
+      "logo": "/images/brands/lg.svg", 
+      "featured": true
+    },
+    {
+      "id": "google",
+      "name": "Google",
+      "logo": "/images/brands/google.svg",
+      "featured": true
+    },
+    {
+      "id": "microsoft",
+      "name": "Microsoft",
+      "logo": "/images/brands/microsoft.svg",
+      "featured": true
+    }
+  ],
+  "products": [
+    {
+      "id": "iphone-15-pro",
+      "name": "iPhone 15 Pro",
+      "brand": "Apple",
+      "price": 999,
+      "oldPrice": 1199,
+      "rating": 5,
+      "reviews": 245,
+      "description": "A17 Pro chip • 6.1\" display • Titanium design",
+      "image": "images/products/iphone-15-pro.webp",
+      "badge": "Best Seller",
+      "affiliateLink": "https://affiliate.store.com/iphone-15-pro?ref=techdeals",
+      "features": ["5G", "Wireless Charging", "Water Resistant"],
+      "storage": "256GB",
+      "screenSize": "6.1",
+      "date": "2023-09-15"
+    },
+    {
+      "id": "samsung-s24-ultra",
+      "name": "Samsung Galaxy S24 Ultra",
+      "brand": "Samsung",
+      "price": 1299,
+      "rating": 5,
+      "reviews": 198,
+      "description": "S Pen • 6.8\" display • 200MP camera",
+      "image": "images/products/samsung-s24-ultra.webp",
+      "affiliateLink": "https://affiliate.store.com/samsung-s24-ultra?ref=techdeals",
+      "features": ["5G", "Wireless Charging", "Water Resistant"],
+      "storage": "512GB",
+      "screenSize": "6.8",
+      "date": "2024-01-20"
+    },
+    {
+      "id": "pixel-8-pro",
+      "name": "Google Pixel 8 Pro",
+      "brand": "Google",
+      "price": 699,
+      "oldPrice": 999,
+      "rating": 4,
+      "reviews": 156,
+      "description": "Tensor G3 • 6.7\" display • AI features",
+      "image": "images/products/pixel-8-pro.webp",
+      "badge": "-30%",
+      "affiliateLink": "https://affiliate.store.com/pixel-8-pro?ref=techdeals",
+      "features": ["5G", "Wireless Charging", "Water Resistant"],
+      "storage": "256GB",
+      "screenSize": "6.7",
+      "date": "2023-10-10"
+    }
+  ],
+  "metadata": {
+    "totalProducts": 850,
+    "lastUpdated": "2024-11-20T10:30:00Z",
+    "version": "1.0",
+    "currency": "USD",
+    "dataSource": "TechDeals Product Database"
+  }
+} 
